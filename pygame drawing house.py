@@ -1,4 +1,6 @@
+#a beautful sunny day in pygameia
 import pygame,sys
+
 width = 640
 height = 480
 tile_size = 20
@@ -18,12 +20,15 @@ cloud_2_xp=240
 cloud_3_xp=427
 moon_xp=580
 clock = pygame.time.Clock()
+
 while True:
     for event in pygame.event.get ():
         if event.type == pygame.QUIT:
             pygame.quit ()
             sys.exit ()
     screen.fill((blue))
+
+    #shapes
     pygame.draw.rect(screen, brown, (width / 2.6, height / 1.6, 50, 80))
     pygame.draw.rect(screen, brick, (width / 3.2, height / 3.4, 40, 60))
     pygame.draw.rect(screen, gray, (width / 3, height / 5, 15, 15))
@@ -48,6 +53,8 @@ while True:
     pygame.draw.rect(screen, brown, (width / 14, height / 1.44, 15, 45))
     pygame.draw.rect(screen, brown, (width / 5, height / 1.44, 15, 45))
     pygame.draw.rect(screen, brown, (width / 14, height / 1.45, 97, 15))
+    
+    #moving clouds
     for x in range(0, 2):
         yp = yp + -.8
         cloud_1_xp = cloud_1_xp + -.8
